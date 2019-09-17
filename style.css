@@ -1,26 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display|Rajdhani:400&display=swap');
+/*================================================================
+Colors
+===============================================================*/
+html{
+	--color-blue: #83d8f2;
+	--color-blue-light: #b7ffff;
+	--color-blue-dark: #4ea6bf;
+	--color-grey: #a0b3d1;
+	--color-grey-light: #d2e5ff;
+	--color-grey-dark: #7184a0;
+	--color-mazarine: #313e5c;
+	--color-mazarine-light: #5c6889;
+	--color-mazarine-dark: #051832;
+	--color-primary: #000000;
+	--color-secondary: #2c2c2c;
+	--color_teriary: #555555;
+}
 /*================================================================
 Typography
 ===============================================================*/
 html{
-	color: purple;
+	color: var(--color-primary);
+	--font-primary: 'Rajdhani', serif, sans-serif;
+	--font-links:'Major Mono Display', monospace, sans-serif;
+	font-family: var(--font-primary);
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: var(--font-links);
 }
 
 a{
-	color: red;
+	color: var(--color-mazarine-dark);
+	font-family: var(--font-links);
+	font-size: 2.5rem;
+	text-decoration: none;
+}
+ul{
+	padding: 0rem;
+}
+li{
+	list-style: none; 
+}
+main{
+	font-size: 1.8rem;
+}
+.font-style1{
+	font-family: var(--font-primary);
+	font-size: 2rem;
+	padding: 2rem;
+}
+.font-style2{
+	font-family: var(--font-links);
+	font-size: 1.8rem;
+	padding: 2rem;
 }
 
 /*================================================================
 Hearder Component
 ===============================================================*/
 header{
-	background-color: purple;
+	background-color: var(--color-blue);
 	padding: 2rem;
 }
+.logo{
+	font-size: 3.5rem;
+}
+.menu{
+	margin: 1rem;
+}
+/*================================================================
+Body Component
+===============================================================*/
+main{
+	padding: 2rem;
+}
+body{
+	margin: auto;
+	max-width: 56rem;
+}
+.color-swatch{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+	
 
 /*================================================================
 Footer Component
 ===============================================================*/
 footer{
-	background-color: yellow;
+	background-color: var(--color-grey-light);
 	padding: 2rem;
 }
