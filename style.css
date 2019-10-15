@@ -24,61 +24,146 @@ html{
 	--font-primary: 'Rajdhani', serif, sans-serif;
 	--font-links:'Major Mono Display', monospace, sans-serif;
 	font-family: var(--font-primary);
-}
-h1,h2,h3,h4,h5,h6{
-	font-family: var(--font-links);
+
+	--size-ratio: 1.18;
+	--size-one-down: calc( 1rem / var(--size-ratio) );
+	--size-five-up: calc( var(--size-four-up)* var(--size-ratio) );
+	--size-four-up: calc( var(--size-three-up) * var(--size-ratio) );
+	--size-three-up: calc( var(--size-two-up) * var(--size-ratio) );
+	--size-two-up: calc( var(--size-one-up) * var(--size-ratio) );
+	--size-one-up: calc( 1rem * var(--size-ratio) );
 }
 
-a{
+@media(min-width: 800px){
+	html {
+		--size-ratio: 1.28;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-links);
+	margin: 3rem 3rem 3rem 0;
+}
+
+h1 {
+	font-size: var(--size-five-up);
+}
+h2 {
+	font-size: var(--size-four-up);
+}
+h3 {
+	font-size: var(--size-three-up)
+}
+h4 {
+	font-size: var(--size-two-up)
+}
+h5 {
+	font-size: var(--size-one-up)
+}
+h6 { 
+	font-size: var(--size-one-down)
+}
+
+a {
 	color: var(--color-mazarine-dark);
 	font-family: var(--font-links);
-	font-size: 2.5rem;
 	text-decoration: none;
 }
-ul{
+ul {
 	padding: 0rem;
 }
-li{
+li {
 	list-style: none; 
 }
-main{
+main {
 	font-size: 1.8rem;
 }
-.font-style1{
+/*================================================================
+Style Component
+===============================================================*/
+.font-style1 {
 	font-family: var(--font-primary);
-	font-size: 2rem;
+	font-size: var(--size-three-up);
 	padding: 2rem;
 }
-.font-style2{
+.font-style2 {
 	font-family: var(--font-links);
-	font-size: 1.8rem;
+	font-size: var(--size-two-up);
+	padding: 2rem;
+}
+.typography {
+	padding: 2rem;
+}
+.h1size {
+	font-size: var(--size-five-up);
+	font-family: var(--font-links);
+}
+.h2size{
+	font-size: var(--size-four-up);
+	font-family: var(--font-links);
+}
+.h3size{
+	font-size: var(--size-three-up);
+	font-family: var(--font-links);
+}
+.h4size{
+	font-size: var(--size-two-up);
+	font-family: var(--font-links);
+}
+.h5size{
+	font-size: var(--size-one-up);
+	font-family: var(--font-links);
+}
+.h6size{
+	font-size: var(--size-one-down);
+	font-family: var(--font-links);
+}
+.center-content{
+	text-align:center;
+}
+.text-size1{
+	font-size: var(--size-two-up);
+	border: 1px solid black;
+	padding: 2rem;
+}
+.text-size2{
+	font-size: var(--size-one-up);
+	border: 1px solid black;
+	padding: 2rem;
+}
+.text-size3{
+	font-size: var(--size-one-down);
+	border: 1px solid black;
 	padding: 2rem;
 }
 
 /*================================================================
-Hearder Component
+Header Component
 ===============================================================*/
-header{
+header {
 	background-color: var(--color-blue);
 	padding: 2rem;
 }
-.logo{
-	font-size: 3.5rem;
+.logo {
+	font-size: var(--size-five-up);
 }
-.menu{
+.menu {
 	margin: 1rem;
+}
+.menu a {
+	font-size: var(--size-three-up)
 }
 /*================================================================
 Body Component
 ===============================================================*/
-main{
+main {
 	padding: 2rem;
 }
-body{
+body {
 	margin: auto;
 	max-width: 56rem;
 }
-.color-swatch{
+.color-swatch {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 }
@@ -87,7 +172,7 @@ body{
 /*================================================================
 Footer Component
 ===============================================================*/
-footer{
+footer {
 	background-color: var(--color-grey-light);
 	padding: 2rem;
 }
