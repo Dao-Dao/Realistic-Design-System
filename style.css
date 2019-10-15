@@ -72,11 +72,8 @@ a {
 ul {
 	padding: 0rem;
 }
-li {
-	list-style: none; 
-}
 main {
-	font-size: 1.8rem;
+	font-size: var(--size-two-up);
 }
 /*================================================================
 Style Component
@@ -122,21 +119,35 @@ Style Component
 	text-align:center;
 }
 .text-size1{
-	font-size: var(--size-two-up);
+	font-size: var(--size-three-up);
 	border: 1px solid black;
 	padding: 2rem;
 }
 .text-size2{
-	font-size: var(--size-one-up);
+	font-size: var(--size-two-up);
 	border: 1px solid black;
 	padding: 2rem;
 }
 .text-size3{
-	font-size: var(--size-one-down);
+	font-size: var(--size-one-up);
 	border: 1px solid black;
 	padding: 2rem;
 }
+/*lists*/
+.ul-eg{
+	list-style: square;
+	list-style-position: inside;
+}
+.ol-eg{
+	list-style: upper-roman;
+	list-style-position: inside;
 
+}
+.list-eg{
+	border: 1px solid black;
+	padding: 2rem;
+	font-size: var(--size-one-up);
+}
 /*================================================================
 Header Component
 ===============================================================*/
@@ -149,10 +160,12 @@ header {
 }
 .menu {
 	margin: 1rem;
+	list-style: none;
 }
 .menu a {
 	font-size: var(--size-three-up)
 }
+
 /*================================================================
 Body Component
 ===============================================================*/
@@ -168,7 +181,6 @@ body {
 	grid-template-columns: 1fr 1fr 1fr;
 }
 	
-
 /*================================================================
 Footer Component
 ===============================================================*/
