@@ -78,6 +78,10 @@ main {
 /*================================================================
 Style Component
 ===============================================================*/
+.color-swatch {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
 .font-style1 {
 	font-family: var(--font-primary);
 	font-size: var(--size-three-up);
@@ -118,20 +122,18 @@ Style Component
 .center-content{
 	text-align:center;
 }
-.text-size1{
-	font-size: var(--size-three-up);
+.text-sizd1, .text-size2, .text-size3{
 	border: 1px solid black;
 	padding: 2rem;
+}
+.text-size1{
+	font-size: var(--size-three-up);
 }
 .text-size2{
 	font-size: var(--size-two-up);
-	border: 1px solid black;
-	padding: 2rem;
 }
 .text-size3{
 	font-size: var(--size-one-up);
-	border: 1px solid black;
-	padding: 2rem;
 }
 /*lists*/
 .ul-eg{
@@ -148,6 +150,52 @@ Style Component
 	padding: 2rem;
 	font-size: var(--size-one-up);
 }
+/*================================================================
+Link Button Component
+===============================================================*/
+.text-under-button, .button-example{
+	display: flex;
+	justify-content: center;
+}
+/*primary button*/
+.button-hero-left, .button-hero-middle, .button-hero-right{
+	font-family: var(--font-primary);
+	font-size: var(--size-four-up);
+	border: 2px solid var(--color-mazarine);
+	border-radius: .5rem;
+	padding: .8rem 1rem;
+	margin: 0 .8rem ;
+}
+.button-hero-left, .button-default-left{
+	background-color: var(--color-mazarine-dark);
+	color: var(--color-blue);
+}
+.button-hero-middle, .button-default-middle{
+	background-color: var(--color-blue-light);
+	color: var(--color-mazarine);
+}
+.button-hero-left:hover, .button-default-left:hover, .button-tertiary-left:hover{
+	box-shadow: 1px 1px 0px #000;
+
+}
+
+/*default button*/
+.button-default-left, .button-default-middle, .button-default-right{
+	font-family: var(--font-primary);
+	font-size: var(--size-two-up);
+	border: 1px solid var(--color-mazarine);
+	padding: .8rem 1rem;
+	margin: 0 .8rem ;
+}
+/*teritary button*/
+.button-tertiary-left, .button-tertiary-middle, .button-tertiary-right{
+	font-family: var(--font-primary);
+	font-size: var(--size-two-up);
+	border: 1px solid var(--color-mazarine);
+	padding: .8rem 1rem;
+	margin: 0 .8rem ;
+}
+
 /*================================================================
 Header Component
 ===============================================================*/
@@ -176,10 +224,7 @@ body {
 	margin: auto;
 	max-width: 56rem;
 }
-.color-swatch {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-}
+
 	
 /*================================================================
 Footer Component
