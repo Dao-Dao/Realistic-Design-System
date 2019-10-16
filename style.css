@@ -14,7 +14,7 @@ html{
 	--color-mazarine-dark: #051832;
 	--color-primary: #000000;
 	--color-secondary: #2c2c2c;
-	--color_teriary: #555555;
+	--color-teriary: #555555;
 }
 /*================================================================
 Typography
@@ -84,55 +84,53 @@ Style Component
 }
 .font-style1 {
 	font-family: var(--font-primary);
-	font-size: var(--size-three-up);
+	font-size: var(--size-five-up);
 	padding: 2rem;
 }
 .font-style2 {
 	font-family: var(--font-links);
-	font-size: var(--size-two-up);
+	font-size: var(--size-five-up);
 	padding: 2rem;
 }
 .typography {
 	padding: 2rem;
 }
-.h1size {
+.h1{
 	font-size: var(--size-five-up);
 	font-family: var(--font-links);
 }
-.h2size{
+.h2{
 	font-size: var(--size-four-up);
 	font-family: var(--font-links);
 }
-.h3size{
+.h3{
 	font-size: var(--size-three-up);
 	font-family: var(--font-links);
 }
-.h4size{
+.h4{
 	font-size: var(--size-two-up);
 	font-family: var(--font-links);
 }
-.h5size{
+.h5{
 	font-size: var(--size-one-up);
 	font-family: var(--font-links);
 }
-.h6size{
+.h6{
 	font-size: var(--size-one-down);
 	font-family: var(--font-links);
 }
-.center-content{
+.body-text-title{
 	text-align:center;
 }
-.text-sizd1, .text-size2, .text-size3{
+.text-box1, .text-box2, .text-box3{
 	border: 1px solid black;
+	box-shadow: 1px 1px grey;
 	padding: 2rem;
 }
-.text-size1{
+.text-box1{
 	font-size: var(--size-three-up);
 }
-.text-size2{
-	font-size: var(--size-two-up);
-}
-.text-size3{
+.text-box3{
 	font-size: var(--size-one-up);
 }
 /*lists*/
@@ -153,12 +151,15 @@ Style Component
 /*================================================================
 Link Button Component
 ===============================================================*/
+.button-example{
+	margin-bottom:  .5rem;
+}
 .text-under-button, .button-example{
 	display: flex;
 	justify-content: center;
 }
 /*primary button*/
-.button-hero-left, .button-hero-middle, .button-hero-right{
+.button-hero-left, .button-hero-middle, .button-hero-right, .button-hero-disable{
 	font-family: var(--font-primary);
 	font-size: var(--size-four-up);
 	border: 2px solid var(--color-mazarine);
@@ -174,28 +175,60 @@ Link Button Component
 	background-color: var(--color-blue-light);
 	color: var(--color-mazarine);
 }
-.button-hero-left:hover, .button-default-left:hover, .button-tertiary-left:hover{
-	box-shadow: 1px 1px 0px #000;
-
-}
-
 /*default button*/
-.button-default-left, .button-default-middle, .button-default-right{
+.button-default-left, .button-default-middle, .button-default-right, .button-default-disable{
+	border: 1px solid var(--color-mazarine);
+	border-radius: .5rem;
 	font-family: var(--font-primary);
 	font-size: var(--size-two-up);
-	border: 1px solid var(--color-mazarine);
 	padding: .8rem 1rem;
 	margin: 0 .8rem ;
 }
 /*teritary button*/
-.button-tertiary-left, .button-tertiary-middle, .button-tertiary-right{
+.button-tertiary-left, .button-tertiary--disable{
 	font-family: var(--font-primary);
-	font-size: var(--size-two-up);
+	font-size: var(--size-one-up);
 	border: 1px solid var(--color-mazarine);
-	padding: .8rem 1rem;
+	border-radius: .3rem;
+	padding: .3rem .8rem;
 	margin: 0 .8rem ;
 }
-
+/*hover*/
+.button-hero-left:hover, .button-default-left:hover{
+	background-color: white;
+	color: var(--color-mazarine-dark);
+	transition-duration: 1s;
+}
+.button-hero-middle:hover,.button-default-middle:hover{
+	background-color: var(--color-blue);
+	color: white;
+	transition-duration: 1s;
+}
+.button-hero-right:hover, .button-default-right:hover{
+	color: var(--color-blue-dark);
+	transition-duration: 1s;
+}
+/*disable*/
+.button-hero-disable, .button-default-disable, .button-tertiary--disable{
+	border: none;
+	background-color: darkgrey;
+	color:var(--color-teriary);
+}
+/*================================================================
+Accordions Component
+===============================================================*/
+summary{
+	border-radius: 0.2rem;
+	padding: 0 1rem;
+}
+.fold-text-details{
+	border: 1px solid var(--color-blue-dark);
+	border-radius: .5rem;
+	padding: .5rem;
+}
+.fold-text-box{
+	padding: 0 2.5rem;
+}
 /*================================================================
 Header Component
 ===============================================================*/
