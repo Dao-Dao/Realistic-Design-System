@@ -217,17 +217,34 @@ Link Button Component
 /*================================================================
 Accordions Component
 ===============================================================*/
-summary{
+summary {
 	border-radius: 0.2rem;
 	padding: 0 1rem;
 }
-.fold-text-details{
+.fold-text-details {
 	border: 1px solid var(--color-blue-dark);
 	border-radius: .5rem;
 	padding: .5rem;
 }
-.fold-text-box{
+.fold-text-box {
 	padding: 0 2.5rem;
+}
+/*================================================================
+Modal dialog Component
+===============================================================*/
+dialog {
+	border: 2px dashed var(--color-blue-dark);
+	border-radius: .5rem;
+}
+dialog::backdrop {
+	background-color: rgba(0,0,0,.8);
+}
+#open-modal{
+	font-size: var(--size-two-up);
+	padding: .5 1rem;
+	margin-left: 2.5rem;
+	border: 1px solid var(--color-blue-dark);
+	border-radius: .5rem;
 }
 /*================================================================
 Header Component

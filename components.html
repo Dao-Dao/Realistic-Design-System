@@ -81,6 +81,15 @@
 			</figure>
 		</section>
 
+		<section>
+			<h3>Modal Dialog</h3>
+			<button id="open-modal" type="button">Open Modal</button>
+			<dialog id="modal-demo">
+				<h4>A modal dialog should look like this.</h4>
+				<p>This is modal dialog content and how we style it ;)</p>
+			</dialog>
+		</section>
+
 	</main>
 	<footer>
 		<p>Realistic Design System by Dao for Beyond Vision</p>
@@ -94,4 +103,24 @@
 		</nav>
 		<p> © All Rights Reserved. 2019 </p>
 	</footer>
+
+	<script>
+	document.addEventListener('DOMContentLoaded', function(){
+
+	const modal = document.querySelector('dialog');
+	const open = document.getElementById('open-modal');
+
+	open.addEventListener('click', () => {
+	modal.showModal();
+	});
+
+	modal.addEventListener('click', event => {
+	if (event.target === modal) {
+	modal.close('cancelled');
+	}
+	});
+
+	});
+</script>
+
 </body>
