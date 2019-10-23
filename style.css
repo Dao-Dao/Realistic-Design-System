@@ -122,9 +122,9 @@ Style Component
 .body-text-title{
 	text-align:center;
 }
-.text-box1, .text-box2, .text-box3{
-	border: 1px solid black;
-	box-shadow: 1px 1px grey;
+.text-box1, .text-box2, .text-box3, .list-eg{
+	border: 1px solid lightgrey;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	padding: 2rem;
 }
 .text-box1{
@@ -144,8 +144,6 @@ Style Component
 
 }
 .list-eg{
-	border: 1px solid black;
-	padding: 2rem;
 	font-size: var(--size-one-up);
 }
 /*================================================================
@@ -251,16 +249,71 @@ dialog::backdrop {
 /*================================================================
 Input Component
 ===============================================================*/
+.text-input-example{
+	align-items: center;
+	border:1px solid lightgrey;
+	border-radius: .3rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 2rem;
+	margin-bottom: 2rem;
+}
 .instruction-text{
 	font-size: var(--size-one-down);
 	margin-top: 0;
 }
-.default-textbox, .vaild-textbox, .invaild-textbox, .disabled-textbox{
-	padding: .5rem 0;
+.default-textbox, .valid-textbox, .invalid-textbox, .disabled-textbox{
+	border:1px solid var(--color-primary);
+	border-radius: .3rem;
+	font-family: var(--font-primary);
+	font-size: var(--size-three-up);
 }
+.default-textbox, .valid-textbox{
+	border-color: var(--color-blue-dark);
+	background-color: var(--color-grey-light);
+	color: var(--color-mazarine-light);
+}
+.invalid-textbox {
+	color: darkred;
+	border-color: darkred;
+	background-color: lightpink;
+}
+.disabled-textbox{
+	border: 1px dashed lightgrey;
+}
+
+
 figure input,textarea,select{
 	display: block;
 }
+textarea, .dropbox{
+	background-color: var(--color-grey-light);
+	border-color: var(--color-blue-dark);
+	color: var(--color-mazarine-light);
+	font-family: var(--font-primary);
+	font-size: var(--size-three-up);
+	margin-bottom: 1rem;
+}
+textarea:disabled{
+	background-color: lightgrey;
+	border:1px dashed grey;
+}
+.submit-button-example{
+	font-size: var(--size-three-up);
+}
+.submit-button-example:hover{
+	border-radius: .5rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.submit-button-example:focus{
+	
+}
+.submit-button-example:active{
+
+}
+
 /*================================================================
 Header Component
 ===============================================================*/
