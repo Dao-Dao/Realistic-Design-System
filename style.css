@@ -33,6 +33,11 @@ html{
 	--size-two-up: calc( var(--size-one-up) * var(--size-ratio) );
 	--size-one-up: calc( 1rem * var(--size-ratio) );
 }
+@media(max-width: 550px){
+	html{
+		--size-ratio: 1.01;
+	}
+}
 
 @media(min-width: 800px){
 	html {
@@ -315,6 +320,47 @@ textarea:disabled{
 }
 
 /*================================================================
+Navgation Component
+===============================================================*/
+.navigation-primary, .navigation-secondary{
+	align-items: center;
+	border:1px solid lightgrey;
+	border-radius: .3rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 2rem;
+	margin-bottom: 2rem;
+}
+.navigation-example-background, .navigation-mobile-background{ /* this is a div*/
+	background-color: var(--color-blue);
+	padding: 2rem;
+}
+.navigation-example-background a{
+	padding-right: 1rem;
+	margin-right: 1rem;
+}
+.navigation-example-background a:hover, .navigation-secondary-background li:hover{
+	color: white;
+	transition: .5s;
+}
+.navigation-mobile-background a{
+	font-size: var(--size-one-up);
+	margin-bottom: 1rem;
+	display: block;
+}
+.current-page{
+	border-right: 2px solid white;
+	border-bottom: 2px solid white;
+	color: white;
+}
+
+.navigation-secondary-background{
+	background-color: var(--color-grey-dark);
+	padding: 2rem;
+}
+/*================================================================
 Header Component
 ===============================================================*/
 header {
@@ -324,12 +370,33 @@ header {
 .logo {
 	font-size: var(--size-five-up);
 }
-.menu {
-	margin: 1rem;
+.menu{
 	list-style: none;
+	margin-bottom: 1rem;
 }
-.menu a {
-	font-size: var(--size-three-up)
+.menu a:hover{
+	color: white;
+	transition: .5s;
+}
+
+
+@media(min-width: 550px){
+	.logo{
+		font-size: var(--size-five-up);
+	} 
+	.menu{
+	display: inline;
+	margin-right: 1.5rem;
+	}
+	.menu a{
+		font-size: var(--size-three-up);
+	}
+	.menu a:active{
+		border-bottom: 2px dashed white;
+	}
+	.menu a:visited{
+		border-bottom: 2px solid white;
+	} /* 无显示 不知原因 current page 需要*/
 }
 
 /*================================================================
@@ -341,6 +408,9 @@ main {
 body {
 	margin: auto;
 	max-width: 56rem;
+}
+li{
+	list-style: none;
 }
 
 	
