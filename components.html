@@ -13,21 +13,293 @@
 			<ul>
 				<li class="menu"> <a href="index.html">Home</a> </li>
 				<li class="menu"> <a href="style.html">Style</a> </li>
+				<li class="menu"> <a href="layout.html">Layout</a></li>
 				<li class="menu"> <a href="components.html">Components</a> </li>
 			</ul>
 		</nav>
 	</header>
 	<main>
-		<h1>Realistic Design Components/Realistic Design Layouts</h1>
+		<h2>Components/Layouts</h2>
+		<section>
+			<h3>Link Buttons</h3>
+			  <figure class="button-example">
+			    <a href="" class="button-hero-left">Button</a>
+			    <a href="" class="button-hero-middle">Button</a>
+			    <a href="" class="button-hero-right">Button</a>
+			    <a href="" class="button-hero-disable">Disable</a>
+			  </figure>
+			  <figcaption class="text-under-button">Primary Button</figcaption>
+
+			  <figure class="button-example">
+			    <a href="" class="button-default-left">Button</a>
+			    <a href="" class="button-default-middle">Button</a>
+			    <a href="" class="button-default-right">Button</a>
+			    <a href="" class="button-default-disable">Disable</a>
+			  </figure>
+			  <figcaption class="text-under-button">Default Button</figcaption>
+
+			  <figure class="button-example">
+			    <a href="" class="button-tertiary-left">Button</a>
+			    <a href="" class="button-tertiary--disable">Disable</a>
+			  </figure>
+			  <figcaption class="text-under-button">Tertiary Button</figcaption>
+		</section>
+
+		<section>
+			<h3>Accordions</h3>
+			<figure>
+					<details class="fold-text-details">
+						<summary>VR for NASA</summary>
+							<div class="fold-text-box">
+								<p>Astronaut</p>
+								<p>Spaceship Interior</p>
+								<p>Spacewalk</p>
+						    </div>			
+					</details>			
+			</figure>
+
+			<figure>
+					<details class="fold-text-details">
+						<summary>VR for Real Estates</summary>
+							<div class="fold-text-box">
+								<p>Broker</p>
+								<p>Landlord</p>
+								<p>Buyer</p>
+							</div>		
+					</details>			
+			</figure>
+
+			<figure>
+					<details class="fold-text-details">
+						<summary>VR for Runway</summary>
+							<div class="fold-text-box">
+								<p>Model</p>
+								<p>Front Row</p>
+								<p>Camera</p>
+							</div>		
+					</details>			
+			</figure>
+		</section>
+
+		<section>
+			<h3>Modal Dialog</h3>
+			<button id="open-modal" type="button">Open Modal</button>
+			<dialog id="modal-demo">
+				<h4>A modal dialog should look like this.</h4>
+				<p>This is modal dialog content and how we style it ;)</p>
+			</dialog>
+		</section>
+
+		<section>
+			<h3>Form Inputs</h3>
+			<figure class="text-input-example">
+			<h4 class="titles-of-inputs">Text Inputs</h4>
+				<label>Text</label>
+				<input type="text" class="default-textbox" value="type here...">
+				<p class="instruction-text">Regular text input outlook</p>
+
+				<label>Text</label>
+				<input type="text" class="valid-textbox" value="***">
+				<p class="instruction-text">Text input with valid entry</p>
+			
+				<label>Text</label>
+				<input type="text" class="invalid-textbox" value="***">
+				<p class="instruction-text">Invalid</p>
+			
+				<label>Text</label>
+				<input disabled="disabled" type="text" class="disabled-textbox">
+				<p class="instruction-text">Text input disabled</p>
+			</figure>
+
+			<figure class="text-input-example">
+				<h4 class="titles-of-inputs">Text Area</h4>
+				<label>Text Area</label>
+				<textarea>Leave your comments...</textarea>
+				<textarea disabled="disabled"></textarea>
+				<p class="instruction-text">Text area disabled</p>
+			</figure>
+
+			<figure class="text-input-example">
+				<h4 class="titles-of-inputs">Select Input</h4>
+				<label>Dropdown Box</label>
+				<select class="dropbox">
+					<option disabled>VR Award of 2021</option>
+					<option hidden>Choose One</option>
+					<option selected>Choose One</option>
+					<option>VR Award of 2020</option>
+					<option>VR Award of 2019</option>
+					<option>VR Award of 2018</option>
+				</select>
+			</figure>
+
+			<figure class="text-input-example">
+				<h4 class="titles-of-inputs">Submit Button</h4>
+				<input class="submit-button-example" type="button" value="Submit">
+			</figure>
+
+		</section>
+
+		<section>
+			<h3>Navigation</h4>
+				<figure class="navigation-primary">
+				<h4>Primary Navigation</h4>
+				<div class="navigation-example-background">
+				   <a class="current-page">Current</a>
+				   <a >Standard</a>
+				   <a >Standard</a>
+				</div>
+				<p>* The lable "Current" indecates the current page on desktop;)</p>
+				<div class="navigation-mobile-background">
+				   <a class="current-page">Current</a>
+				   <a >Standard</a>
+				   <a >Standard</a>
+				</div>
+				<p>* The lable "Current" indecates the current page on mobile desktop;)</p>
+				</figure>
+
+				<figure class="navigation-secondary">
+				<h4>Secondary Navigation</h4>
+				<div class="navigation-secondary-background">
+					<a href="">Navigation</a>
+					<li href="">Section A</li>
+						<ul>
+							<li class="current-page">Current</li>
+							<li>Link b</li>
+						</ul>
+					<li href="">Section B</li>
+					<li href="">Section C</li>
+				</div>
+				<p>* The lable "Current" indecates the current spot ;)</p>
+				</figure>
+		</section>
+
+
+
+
+		<section>
+                
+            <h3>Notifications</h3>
+
+            <h4>Error</h4>
+            <figure class="notification-cards">
+                <div class="notification notification-error">                                  
+                    <svg class="notification-icons" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M41.55 44.65C46.65 52.85 45.9 62.5 39.8 66.4C33.7 70.2 24.6 66.65 19.45 58.45C14.35 50.25 15.15 40.5 21.25 36.7C27.35 32.9 36.45 36.45 41.55 44.65ZM50 78.75C60 78.75 62.5 75 62.5 75C62.5 75 60 85 50 85C40 85 37.5 75.15 37.5 75C37.5 75 40 78.75 50 78.75ZM78.75 36.7C84.85 40.5 85.65 50.25 80.55 58.45C75.4 66.65 66.3 70.2 60.2 66.4C54.1 62.5 53.35 52.85 58.45 44.65C63.55 36.45 72.65 32.9 78.75 36.7ZM50 90C62.5 90 90 64.3 90 45C90 25.7 72.05 10 50 10C27.95 10 10 25.7 10 45C10 64.3 37.5 90 50 90ZM50 0C77.5 0 100 20.2 100 45C100 65.4 71.6 100 50 100C28.4 100 0 65.4 0 45C0 20.2 22.5 0 50 0Z" fill="#EDB219"/>
+					</svg>                   
+                    <div>
+						<p>Oops, something is wrong, click "inspect" to find out.</p>
+						<div class="notification-buttons">
+                        	<input type="submit" value="Inspect!" class="notification-comfirm">
+							<input type="submit" value="Cancel" class="notification-cancel"> 
+						</div>
+                    </div>
+                </div>
+            </figure>
+
+            <h4>Warning</h4>
+            <figure class="notification-cards">
+                <div class="notification notification-warning">                  
+                    <svg class="notification-icons" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M55 55H45V25H55V55ZM55 75H45V65H55V75ZM50 0C43.4339 0 36.9321 1.29329 30.8658 3.80602C24.7995 6.31876 19.2876 10.0017 14.6447 14.6447C5.26784 24.0215 0 36.7392 0 50C0 63.2608 5.26784 75.9785 14.6447 85.3553C19.2876 89.9983 24.7995 93.6812 30.8658 96.194C36.9321 98.7067 43.4339 100 50 100C63.2608 100 75.9785 94.7322 85.3553 85.3553C94.7322 75.9785 100 63.2608 100 50C100 43.4339 98.7067 36.9321 96.194 30.8658C93.6812 24.7995 89.9983 19.2876 85.3553 14.6447C80.7124 10.0017 75.2005 6.31876 69.1342 3.80602C63.0679 1.29329 56.5661 0 50 0V0Z" fill="#9A5254"/>
+					</svg>
+
+                    <div>
+                        <p>Attention! Attention! Your account has been attacked!</p>
+                        <div class="notification-buttons">
+                        	<input type="submit" value="Help!" class="notification-comfirm">
+                        	<input type="submit" value="Cancel" class="notification-cancel">
+                        </div>
+                    </div>
+                </div>
+            </figure>
+
+            <h4>Neutral</h4>
+            <figure class="notification-cards">
+                <div class="notification notification-neutral">
+                     <svg class="notification-icons" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M45 45H55L55 75H45L45 45ZM45 25H55V35H45V25ZM50 100C56.5661 100 63.0679 98.7067 69.1342 96.194C75.2005 93.6812 80.7124 89.9983 85.3553 85.3553C94.7322 75.9785 100 63.2608 100 50C100 36.7392 94.7322 24.0215 85.3553 14.6447C80.7124 10.0017 75.2005 6.31875 69.1342 3.80602C63.0679 1.29328 56.5661 0 50 0C36.7392 0 24.0215 5.26784 14.6447 14.6447C5.26784 24.0215 0 36.7392 0 50C0 56.5661 1.29328 63.0679 3.80602 69.1342C6.31875 75.2005 10.0017 80.7124 14.6447 85.3553C19.2876 89.9983 24.7995 93.6812 30.8658 96.194C36.9321 98.7067 43.4339 100 50 100V100Z" fill="#A0B3D1"/>
+					</svg>
+                    
+                     <div>
+                        <p>You will need at least 5 hours to complete mission 99, do you accept?</p>
+                        <div class="notification-buttons">
+                        	<input type="submit" value="Yes!" class="notification-comfirm">
+                        	<input type="submit" value="Cancel" class="notification-cancel">
+                        </div>
+                    </div>
+                </div>
+            </figure>
+
+
+            <h4>Success</h4>
+            <figure class="notification-cards">
+                <div class="notification notification-success">                 
+        
+              		<svg class="notification-icons" width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M83.6667 42C83.6667 53.0507 79.2768 63.6488 71.4628 71.4628C63.6488 79.2768 53.0507 83.6667 42 83.6667C36.5283 83.6667 31.1101 82.5889 26.0549 80.495C20.9996 78.4011 16.4063 75.3319 12.5372 71.4628C4.7232 63.6488 0.333336 53.0507 0.333336 42C0.333336 30.9493 4.7232 20.3512 12.5372 12.5372C20.3512 4.72321 30.9493 0.333344 42 0.333344C47.4718 0.333344 52.8899 1.41108 57.9452 3.50503C63.0004 5.59898 67.5937 8.66812 71.4628 12.5372C75.3319 16.4063 78.401 20.9996 80.495 26.0549C82.5889 31.1101 83.6667 36.5283 83.6667 42V42ZM17 46.1667H50.3333L35.75 60.75L41.6667 66.6667L66.3333 42L41.6667 17.3333L35.75 23.25L50.3333 37.8333H17V46.1667Z" fill="#A1CB6B"/>
+					</svg>
+
+                    <div>                 
+                        <p>Conguradulation! You have completed mission 8 ;)</p>
+                        <div class="notification-buttons">
+                        	<input type="submit" value="Next" class="notification-comfirm">
+                        	<input type="submit" value="Cancel" class="notification-cancel">
+                        </div>
+                    </div>                 
+                </div>
+            </figure>
+        </section>
+	
+
+
+        <section>
+            <h3 id="hero-block">Hero Block</h2>
+
+            <figure class="hero-block-card">
+            	<div>
+                	<a href="hero-block.html">
+                		<img src="images/hero-screenshot.jpg" class="hero-screenshot" alt="hero-image">
+                	</a>
+            	</div>
+            </figure>
+
+        </section>
+
+
+
 	</main>
+
+
 	<footer>
-		<p>A credit line for the design system with your name</p>
-		<p>A short professional bio</p>
+		<p>Realistic Design System by Dao for Beyond Vision</p>
+		<p>Dao Zhuona, Chinese, freelance watercolor painter, future UX designer.</p>
+		<p>Current location: Austin, Texas </p>
+
 		<nav>
-			<a href=""><li>github</li></a>
+			<a href="https://github.com/Dao-Dao/"><li>github</li></a>
 			<a href=""><li>linkedin</li></a>
-			<a href=""><li>something else</li></a>
+			<a href="https://web.wechat.com/"><li>wechat</li></a>
 		</nav>
-		<p>All Rights Reserved by Dao. 2019</p>
+		<p> © All Rights Reserved. 2019 </p>
 	</footer>
+
+	<script>
+	document.addEventListener('DOMContentLoaded', function(){
+
+	const modal = document.querySelector('dialog');
+	const open = document.getElementById('open-modal');
+
+	open.addEventListener('click', () => {
+	modal.showModal();
+	});
+
+	modal.addEventListener('click', event => {
+	if (event.target === modal) {
+	modal.close('cancelled');
+	}
+	});
+
+	});
+</script>
+
 </body>
