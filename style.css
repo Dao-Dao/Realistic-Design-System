@@ -446,14 +446,15 @@ Notification Component
 Hero Block
 ===============================================================*/
 .hero-image{
+	align-items: flex-start;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(images/hero1.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	width: 100vw; 
 	height: 100vh;
 	display: flex;
 	justify-content: center;
-	align-items: flex-start;
 	text-align: center;
 }
 .hero-text{
@@ -492,6 +493,107 @@ Hero Component
 	margin-bottom: 2rem;
 	max-width: 300px;
 }
+
+/*================================================================
+Information Card Component
+===============================================================*/
+/*article*/
+
+.card-container{
+	border: 1px solid darkgrey;
+	border-radius: .5rem;
+	padding: 2rem;
+	margin-bottom: 2rem;
+	max-width: 300px;
+    min-height: 180px;
+}
+.card-container:hover{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+}
+
+.article-cards-text{
+	font-size: var(--size-one-down);
+	text-align: center;
+}
+.article-cards-text:hover{
+	color: var(--color-blue-dark);
+}
+.card-1 {
+	background-image: url(images/info-card-1.jpg);
+	background-repeat: none;
+	text-align: center;
+    margin: auto;
+    max-width: 300px;
+    min-height: 180px;
+}
+h6{
+	margin: 1rem 0;
+	text-align: center;
+}
+.addressed-text{
+	color: #D93296;
+}
+.article-cards-link:hover{
+	color: var(--color-blue-dark);
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+/* profile*/
+.profile-box{
+	display: flex;
+	font-size: var(--size-one-up);
+	justify-content: flex-start;}
+
+.profile-content{
+	margin: 0 1rem;
+}
+.profile-content p{
+	margin-top: 0;
+	margin-bottom: .5rem;
+}
+
+/*flip-card*/
+/*
+<div class="flip-card-back">
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+     </p>
+</div>
+*/
+
+
+/*call to action*/
+.action-img{
+	max-width: 300px;
+	min-height: 220px;
+}
+.action-button{
+	border: 1px solid white;
+	border-radius: .5rem;
+	color: white;
+	font-family: var(--font-primary);
+	font-size: var(--size-two-up);
+	text-align: right;
+	padding: .5rem;
+	margin-left: 190px;
+}
+
+}
+.action-button:hover{
+	border: 1px solid black;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+	color: black;
+	transition: 2s;
+}
+.action-box p{
+	margin-top: -3.5rem;
+}
+
+
+
+
+
 /*================================================================
 Header Component
 ===============================================================*/
@@ -539,7 +641,7 @@ main {
 }
 body {
 	margin: auto;
-	max-width: 56rem;
+	max-width: 56rem;	
 }
 li{
 	list-style: none;
