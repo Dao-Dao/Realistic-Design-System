@@ -54,10 +54,12 @@ h1 {
 	font-size: var(--size-five-up);
 }
 h2 {
+	border-bottom: 1px solid var(--color-blue-dark);
 	font-size: var(--size-four-up);
 }
 h3 {
-	font-size: var(--size-three-up)
+	font-size: var(--size-three-up);
+	color: var(--color-blue-dark);
 }
 h4 {
 	font-size: var(--size-two-up)
@@ -236,7 +238,7 @@ summary {
 Modal dialog Component
 ===============================================================*/
 #modal-demo{
-	border: 2px dashed var(--color-blue-dark);
+	border: 5px dashed var(--color-blue);
 	border-radius: .5rem;
 	max-width: 50vw;
 }
@@ -271,22 +273,23 @@ Input Component
 }
 .default-textbox, .valid-textbox, .invalid-textbox, .disabled-textbox{
 	border:1px solid var(--color-primary);
-	border-radius: .3rem;
+	border-radius: .5rem;
 	font-family: var(--font-primary);
 	font-size: var(--size-three-up);
 }
 .default-textbox, .valid-textbox{
 	border-color: var(--color-blue-dark);
 	background-color: var(--color-grey-light);
-	color: var(--color-mazarine-light);
+	color: var(--color-mazarine-dark);
 }
-.invalid-textbox {
+.invalid-textbox, .error-textarea, .error-dropbox{
 	color: darkred;
 	border-color: darkred;
 	background-color: lightpink;
 }
-.disabled-textbox{
-	border: 1px dashed lightgrey;
+.disabled-textbox, .disabled-textarea{
+	border: 1.5px dashed darkgrey;
+	background-color: lightgrey;
 }
 
 
@@ -301,22 +304,12 @@ textarea, .dropbox{
 	font-size: var(--size-three-up);
 	margin-bottom: 1rem;
 }
-textarea:disabled{
-	background-color: lightgrey;
-	border:1px dashed grey;
-}
 .submit-button-example{
 	font-size: var(--size-three-up);
 }
 .submit-button-example:hover{
 	border-radius: .5rem;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.submit-button-example:focus{
-	
-}
-.submit-button-example:active{
-
 }
 
 /*================================================================
@@ -451,7 +444,6 @@ Hero Block
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	width: 100vw; 
 	height: 100vh;
 	display: flex;
 	justify-content: center;
@@ -499,7 +491,7 @@ Information Card Component
 ===============================================================*/
 /*article*/
 
-.card-container{
+.card-container {
 	border: 1px solid darkgrey;
 	border-radius: .5rem;
 	padding: 2rem;
@@ -507,15 +499,15 @@ Information Card Component
 	max-width: 300px;
     min-height: 180px;
 }
-.card-container:hover{
+.card-container:hover {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
 }
 
-.article-cards-text{
+.article-cards-text {
 	font-size: var(--size-one-down);
 	text-align: center;
 }
-.article-cards-text:hover{
+.article-cards-text:hover {
 	color: var(--color-blue-dark);
 }
 .card-1 {
@@ -533,19 +525,19 @@ h6{
 .addressed-text{
 	color: #D93296;
 }
-.article-cards-link:hover{
+.article-cards-link:hover {
 	color: var(--color-blue-dark);
 	text-decoration: underline;
 	font-weight: bold;
 }
 
 /* profile*/
-.profile-box{
+.profile-box {
 	display: flex;
 	font-size: var(--size-one-up);
 	justify-content: flex-start;}
 
-.profile-content{
+.profile-content {
 	margin: 0 1rem;
 }
 .profile-content p{
@@ -563,11 +555,11 @@ h6{
 
 
 /*call to action*/
-.action-img{
+.action-img {
 	max-width: 300px;
 	min-height: 220px;
 }
-.action-button{
+.action-button {
 	border: 1px solid white;
 	border-radius: .5rem;
 	color: white;
@@ -579,26 +571,149 @@ h6{
 }
 
 }
-.action-button:hover{
+.action-button:hover {
 	border: 1px solid black;
 	background-color: white;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 	color: black;
-	transition: 2s;
+	transition: 1s;
 }
-.action-box p{
+
+.action-box p {
 	margin-top: -3.5rem;
 }
 
+/*================================================================
+layout Component
+===============================================================*/
+
+.card-callouts-screenshot{
+	max-height: 400px;
+	max-width: 600px;
+}
+/*================================================================
+Gird Card Component
+===============================================================*/
+
+.grid {
+	color: white;
+	display: grid;
+	font-weight: bold;
+	padding: .5rem;
+	grid-gap: .5rem;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(6, 1fr);
+	min-width: 280px;
+
+}
+@media(min-width: 500px){
+
+	.gird{
+		max-width: 460px;
+	}
+}
+
+.grid div {
+	background-color: var(--color-blue);
+	border-radius: 5px;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	padding: 1rem;
+}
+.grid img{
+	
+	max-width: 100px;
+	max-height: 80px;
+
+}
+.card3 img, .card4 img{
+	max-width: 70px;
+}
+.card5 img, .card6 img{
+	max-width: 50px;
+}
+
+.card1, .card2{
+	grid-row-start: 1;
+	grid-row-end: 4;
+}
+.card3, .card4{
+	grid-row-start: 4;
+	grid-row-end: 6;
+}
+.hover{
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover:hover{
+	background-color: var(--color-mazarine-dark);
+	opacity: .8;
+}
+
+/*================================================================
+layout Callout Component
+===============================================================*/
+@media(min-width: 800px){
+	.callout-layout{
+		display: flex;
+		justify-content: flex-start;
+	}
+}
 
 
+.callout-card {
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 1.5rem;
+	box-shadow: 0 7px 3px -5px;
+	margin-top: 5rem;
+	min-width: 200px;
+	max-width: 250px;
+	padding-top: 10rem;
+	position: relative;
+}
+
+
+.callout-card img {
+	border-radius: 50%;
+	box-shadow: 1px 2px 6px #aaa;
+	left: calc( 50% - 5rem);
+	margin: auto;
+	max-width: 10rem;
+	position: absolute;
+	top: -3rem;
+}
+.callout-card div{
+	background-color: var(--color-mazarine);
+	border-radius: 0 0 1.5rem 1.5rem;
+	color: white;
+	padding: 1rem 1.5rem 1rem;
+	margin: 0;
+}
+.callout-card a{
+	text-align: center;
+	color: white;
+}
+.callout-card a p{
+	border:1px solid white;
+	border-radius: 5px;
+}
+.callout-card a p:hover{
+	background-color: white;
+	color: var(--color-mazarine);
+	transition: 1s;
+}
+.callout-card h5{
+	margin-top: 1rem;
+}
 
 
 /*================================================================
 Header Component
 ===============================================================*/
 header {
-	background-color: var(--color-blue);
+	background-color: transparent;
 	padding: 2rem;
 }
 .logo {
@@ -609,10 +724,9 @@ header {
 	margin-bottom: 1rem;
 }
 .menu a:hover{
-	color: white;
+	color: var(--color-blue-dark);
 	transition: .5s;
 }
-
 
 @media(min-width: 550px){
 	.logo{
@@ -633,25 +747,49 @@ header {
 	} /* 无显示 不知原因 current page 需要*/
 }
 
+
+
 /*================================================================
 Body Component
 ===============================================================*/
-main {
-	padding: 2rem;
-}
 body {
 	margin: auto;
-	max-width: 56rem;	
+}
+main {
+	padding: 2rem;
+	max-width: 56rem;
 }
 li{
 	list-style: none;
-}
-
-	
+}	
 /*================================================================
 Footer Component
 ===============================================================*/
 footer {
 	background-color: var(--color-grey-light);
 	padding: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+@keyframes move{
+  0%{
+    background-position:calc(var(--point-gap-width) / 2) calc(var(--point-gap-height) / 2);
+  }
+  100%{
+    background-position:calc(var(--point-gap-width) / 2) calc(var(--point-gap-height) / 2 * -1);
+  }
 }
